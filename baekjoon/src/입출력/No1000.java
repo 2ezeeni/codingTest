@@ -9,6 +9,8 @@ public class No1000 {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		System.out.println(a + b);
+		
+		sc.close();  //Scanner 사용 후 닫아주기
 	}
 
 }

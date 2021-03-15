@@ -18,19 +18,14 @@ public class No2439 {
 		StringBuilder sb = new StringBuilder();
 		int num = Integer.parseInt(br.readLine());
 		
-		int blank = (num - 1);
-		int star = 1; 
-		
-		while(blank >= 0 && star <= num) {
-			for(int i = 0; i < blank; i++) {
+		for(int i = 1; i <= num; i++) {
+			for(int j = 0; j < (num - i); j++) { 
 				sb.append(" ");
 			}
-			for(int j = 0; j < star; j++) {
+			for(int k = 0; k < i; k++) { 
 				sb.append("*");
 			}
 			sb.append("\n");
-			blank--;
-			star++;
 		}
 		
 		System.out.println(sb);

@@ -1,38 +1,42 @@
 package 입출력;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class No10992 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		// 문제. 예제를 보고 규칙을 유추한 뒤에 별을 찍어 보세요.
-
-		Scanner sc = new Scanner(System.in);
-		int num = sc.nextInt();
 		
-		for (int i = 1; i < num; i++) {
-			System.out.print(" ");
-		}
-		System.out.println("*");
+		// 맨앞 빈칸을 먼저 출력한 후
+		// 2n-1만큼 반복. 1. 맨 마지막 줄일때는 전부 "*" 출력
+		//		 		  2. 아닐때는 맨 첫번째와 맨 마지막만 "*" 출력
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		for (int i = 2; i < num; i++) { 
-			for (int j = num - i; j > 0; j--) {
-				System.out.print(" ");
+		int num = Integer.parseInt(br.readLine());
+		
+		for(int i = 1; i <= num; i++) {
+			for(int blank = 0; blank < num - i; blank++) {
+				bw.write(" ");
 			}
-			System.out.print("*");
-			for (int j = 1; j <= 2 * (i - 1)- 1; j++) {
-				System.out.print(" ");
+			for(int j = 1; j <= 2 * i - 1; j++) {
+				if(i == num) { bw.write("*"); continue; }
+				if(j == 1 || j == 2 * i - 1) {
+					bw.write("*");
+				} else {
+					bw.write(" ");
+				}
 			}
-			System.out.println("*");
+			bw.newLine();
 		}
 		
-		if (num != 1) {
-			for (int i = 1; i <= 2 * num - 1; i++) {
-				System.out.print("*");
-			}
-			System.out.println();
-		}
+		bw.flush();
+		br.close();
+		bw.close();
 		
 	}
-
 }

@@ -7,6 +7,9 @@ public class Q02 {
 	public static int dp[] = new int[30001];
 	
 	public static void main(String[] args) {
+		// 문제. 정수 X가 주어졌을 때, 연산 4개를 적절히 사용해서 1로 만들고자 합니다.
+		//		 연산을 사용하는 횟수의 최솟값을 출력하세요.
+		
 		Scanner sc = new Scanner(System.in);
 		
 		int N = sc.nextInt();

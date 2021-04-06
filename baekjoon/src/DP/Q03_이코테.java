@@ -3,7 +3,7 @@ package DP;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Q03 {
+public class Q03_이코테 {
 	
 	
 	public static void main(String[] args) {

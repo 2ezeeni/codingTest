@@ -2,7 +2,7 @@ package 그리디;
 
 import java.util.Scanner;
 
-public class Q02 {
+public class Q02_이코테 {
 
 	public static void main(String[] args) {
 		// 문제. 다음의 두 연산을 이용해서 N이 1이 될때까지의 최소 횟수를 구하는 프로그램을 작성하세요.

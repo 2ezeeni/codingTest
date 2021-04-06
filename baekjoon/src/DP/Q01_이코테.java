@@ -2,7 +2,7 @@ package DP;
 
 import java.util.Scanner;
 
-public class Q01 {
+public class Q01_이코테 {
 	public static int dp[] = new int[100];
 	
 	public static void main(String[] args) {

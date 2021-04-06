@@ -2,7 +2,7 @@ package 그리디;
 
 import java.util.Scanner;
 
-public class Q01 {
+public class Q01_이코테 {
 
 	public static void main(String[] args) {
 		// 문제. 손님에게 거슬러 줘야할 돈이 N원일때

@@ -2,7 +2,7 @@ package DP;
 
 import java.util.Scanner;
 
-public class Q04 {
+public class Q04_이코테 {
 	
 	// 공통으로 사용하는 변수
 	static int testCase, n, m;

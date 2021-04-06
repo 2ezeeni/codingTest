@@ -19,17 +19,12 @@ public class Q02 {
 		int K = sc.nextInt();
 		int count = 0;
 		
-		while(true) {
-			int target = (N / K) * K;
-			count += (N - target);
-			N = target;
-			
-			if(N < K) break;
-			
-			count += 1;
-			N /= K;
+		while(N != 1) {
+			if(N % K == 0) N /= K;
+			else N--;
+			count++;
 		}
-		count += (N - 1);
+		
 		System.out.println(count);
 		
 	}

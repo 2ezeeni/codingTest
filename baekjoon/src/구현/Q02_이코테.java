@@ -4,34 +4,35 @@ import java.util.Scanner;
 
 public class Q02_이코테 {
 
-	public static void main(String[] args){
-		// 문제. 나이트는 특정위치에서 L자 형태로만 이동할 수 있으며, 정원 밖으로는 나갈 수 없습니다.
-		//		 특정위치가 주어질때 나이트가 이동할 수 있는 경우의 수를 출력하시오.
+	public static void main(String[] args) {
+		// 문제. N * N 공간 내에서, 이동할 계획서 내용에 따라 이동 후
+		// 		 최종적으로 도착할 지점의 좌표 (x, y)를 공백을 기준으로 구분하여 출력하세요.
 		
+		// 나이트가 이동할 수 있는 방향을 정의하고 각 방향에 대해 이동이 가능한지 확인한다.
+		// (N * N 공간을 벗어나지 않는지 확인)
+	
 		Scanner sc = new Scanner(System.in);
 		
-		// 현재 나이트의 위치 입력받기
-        String inputData = sc.nextLine();
-        int row = inputData.charAt(1) - '0';
-        int column = inputData.charAt(0) - 'a' + 1;
-
-        // 나이트가 이동할 수 있는 8가지 방향 정의
-        int[] dx = {-2, -1, 1, 2, 2, 1, -1, -2};
-        int[] dy = {-1, -2, -2, -1, 1, 2, 2, 1};
-        
-        // 8가지 방향에 대하여 각 위치로 이동이 가능한지 확인
-        int result = 0;
-        for (int i = 0; i < 8; i++) {
-            // 이동하고자 하는 위치 확인
-            int nextRow = row + dx[i];
-            int nextColumn = column + dy[i];
-            // 해당 위치로 이동이 가능하다면 카운트 증가
-            if (nextRow >= 1 && nextRow <= 8 && nextColumn >= 1 && nextColumn <= 8) {
-                result += 1;
-            }
-        }
-        System.out.println(result);
+		// 현재 나이트의 위치 입력 받기
+		String n = sc.nextLine();
+		int row = n.charAt(1) - '0';
+		int column = n.charAt(0) - 'a' + 1;
 		
+		// 이동할 수 있는 8개의 방향 정의
+		int[] dx = {-2, -2, 2, 2, -1, 1, -1, 1};
+		int[] dy = {-1, 1, -1, 1, -2, -2, 2, 2};
+		
+		// 이동 할 수 있는지 확인 후 카운트
+		int count = 0;
+		for(int i = 0; i < 8; i++) {
+			int nextRow = row + dx[i];
+			int nextColumn = row + dy[i];
+			if (nextRow >= 1 && nextRow <= 8 && nextColumn >= 1 && nextColumn <= 8) {
+				count++;
+			}
+		}
+		
+		System.out.println(count);
 	}
 
 }

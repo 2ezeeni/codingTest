@@ -1,3 +1,5 @@
+package BFS_DFS;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
@@ -53,7 +55,7 @@ public class Q1707 {
 					if(visit[al[now].get(j)] == 0) {
 						q.add(al[now].get(j));
 					}
-					
+
 					if(visit[al[now].get(j)] == visit[now]) {
 						System.out.println("NO");
 						return;
@@ -70,4 +72,4 @@ public class Q1707 {
 		System.out.println("YES");
 	}
 
-}
+} 

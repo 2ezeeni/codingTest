@@ -20,7 +20,7 @@ public class Q10819 {
         solve(0);
         System.out.println(result);
     }
-    
+
     static int result;
     static int[] visited;
     static int[] tArr; 
@@ -32,7 +32,7 @@ public class Q10819 {
             result = Math.max(result, sum);
             return;
         }
-        
+
         for(int i = 0;i < n;i++) {
             if(visited[i] == 1) continue; 
             visited[i] = 1;
